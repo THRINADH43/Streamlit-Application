@@ -15,7 +15,8 @@ st.set_page_config(page_title='OpenAI Text Generator', page_icon=':robot:')
 st.header('OpenAI Text Generator')
 
 # API key
-openai.api_key = API_KEY
+#openai.api_key = API_KEY
+openai.api_key = st.sidebar.text_input('OpenAI API Key', type='password')
 
 # Input elements
 user_input = st.text_input("Enter prompt:", "")
