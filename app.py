@@ -6,7 +6,6 @@ import os
 
 dotenv.load_dotenv() 
 
-API_KEY = os.getenv('api_key')
 
 # Page config
 st.set_page_config(page_title='OpenAI Text Generator', page_icon=':robot:') 
@@ -15,7 +14,7 @@ st.set_page_config(page_title='OpenAI Text Generator', page_icon=':robot:')
 st.header('OpenAI Text Generator')
 
 # API key
-#openai.api_key = API_KEY
+
 openai.api_key = st.sidebar.text_input('OpenAI API Key', type='password')
 
 # Input elements
